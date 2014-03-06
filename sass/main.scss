@@ -6,27 +6,27 @@ html{
 
 $ib-rounded: 5px;
  
-// FONT SIZE => FZ
+// FONT SIZE
 $ib-fz-header-size: 1.125em;
 $ib-fz-button-size: .75em;
 $ib-fz-small:       .625em;
 
-// MAIN BOX => MB
+// MAIN BOX
 $ib-mb-shadow: #aaa;
 
-// COLOR => C
+// COLOR
 $ib-c-header-color: #ff6200;
-$text-dark-grey:    #333;
+$ib-c-grey:         #333;
 $ib-note-color:     #777;
 
-// LINK => L
+// LINK
 $ib-l-color:       #ff6200;
 $ib-l-color-hover: #603913;
 
 // Sprite
 $ib-sprite: '../img/info_box_sprite.png';
 
-// BUTTON => B
+// BUTTON
 $ib-b-color: #aaa;
 $ib-b-hover-color: #fff;
 
@@ -41,7 +41,7 @@ $ib-b-separator: #fff;
 .info-box{
 	@include box-shadow(3px 3px 3px $ib-mb-shadow);
 	@include rounded($ib-rounded);
-	color: $text-dark-grey;
+	color: $ib-c-grey;
 	background: #fff;
 }
 	.info-box_header{
