@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>InfoBox</title>
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<div style="margin:0 auto;width:312px;">
+		<section class="info-box">
+			<div class="info-box_navigation">
+				<a href="#" class="info-box_button info-box_button_prev info-box_offset_right info-box_button_left">
+					<i class="info-box_bullet"></i><!--
+					--><span class="info-box_nav_title">Prev</span>
+				</a>
+				<a href="#" class="info-box_button info-box_button_next info-box_button_left">
+					<span class="info-box_nav_title">Next</span><!--
+					--><i class="info-box_bullet"></i>
+				</a>
+				<a href="#" target="_blank" class="info-box_button info-box_button_play info-box_button_right">
+					<span class="info-box_nav_title">Find A Store</span><!--
+					--><i class="info-box_bullet"></i>
+				</a>
+			</div>
+		</section>
+	</div>
+
+	<script type="text/html" id="info-box-template-item">
+		{{#infoBox}}
+			<div class="info-box_item" data-info-box-url="{{productUrl}}">
+				<figure class="info-box_thumb">
+					<img src="img/{{img}}" alt="{{alt}}">
+				</figure>
+				<h1 class="info-box_header">{{title}}</h1>
+				<p class="info-box_description">
+					{{description}}
+					<span class="info-box_note">{{note}}</span>
+				</p>
+				<a href="#" class="info-box_details"></a>
+			</div>
+		{{/infoBox}}
+	</script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/mustache.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

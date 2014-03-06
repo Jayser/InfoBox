@@ -1,0 +1,195 @@
+@import "compass";
+@import "mixin";
+html{
+	background:#eee;
+}
+
+$ib-rounded: 5px;
+ 
+// FONT SIZE => FZ
+$ib-fz-header-size: 1.125em;
+$ib-fz-button-size: .75em;
+$ib-fz-small:       .625em;
+
+// MAIN BOX => MB
+$ib-mb-shadow: #aaa;
+
+// COLOR => C
+$ib-c-header-color: #ff6200;
+$text-dark-grey:    #333;
+$ib-note-color:     #777;
+
+// LINK => L
+$ib-l-color:       #ff6200;
+$ib-l-color-hover: #603913;
+
+// Sprite
+$ib-sprite: '../img/info_box_arrows.png';
+
+// BUTTON => B
+$ib-b-color: #aaa;
+$ib-b-hover-color: #fff;
+
+$ib-b-grey:      #cecece;
+
+$ib-b-text-shadow: transparent;
+$ib-b-text-shadow-hover: #333;
+
+$ib-b-separator: #fff;
+
+// STYLE
+.info-box{
+	@include box-shadow(3px 3px 3px $ib-mb-shadow);
+	@include rounded($ib-rounded);
+	color: $text-dark-grey;
+	background: #fff;
+}
+	.info-box_header{
+		font-size: $ib-fz-header-size;
+		color: $ib-c-header-color;
+	}
+	.info-box_description{
+		font-size: $ib-fz-small;
+	}
+	.info-box_note{
+		color: $ib-note-color;
+	}
+	.info-box_details{
+		font-size: $ib-fz-small;
+		color: $ib-l-color;
+		&:hover{
+			color: $ib-l-color-hover;
+		}
+	}
+	.info-box_button{
+		color: $ib-b-color;
+		font-size: $ib-fz-button-size;
+		border: 1px solid $ib-b-grey;
+		@include rounded($ib-rounded);
+		background: url($ib-sprite) repeat-x 0 -33px transparent;
+		.info-box_nav_title{
+			text-shadow: 1px 1px 1px $ib-b-text-shadow;
+			&:hover {
+				background: url($ib-sprite) repeat-x 0 -58px transparent;
+				color: $ib-b-hover-color;
+				text-shadow:1px 1px 1px $ib-b-text-shadow-hover;
+			}
+		}
+	}
+	.info-box_bullet{
+		background-image: url(#{$ib-sprite});
+		background-repeat: no-repeat;
+		background-color:transparent;
+	}
+	.info-box_button_prev{
+		.info-box_bullet{
+			border-right: 1px solid $ib-b-grey;
+			background-position: -4px -5px;
+			box-shadow:1px 0 $ib-b-separator;
+		}
+	}
+	.info-box_button_next{
+		.info-box_bullet{
+			border-left: 1px solid $ib-b-grey;
+			background-position: -34px -5px;
+			box-shadow: -1px 0 $ib-b-separator;
+		}
+	}
+	.info-box_button_play{
+		.info-box_bullet{
+			border-left: 1px solid $ib-b-grey;
+			background-position: -64px -5px;
+			box-shadow: -1px 0 $ib-b-separator;
+		}
+	}
+
+// LAYOUT
+.info-box{
+	@include inline-block;
+	font: 16px normal verdana, arial, sans-serif;
+	overflow: hidden;
+}
+
+	.info-box_thumb{
+		margin: 0;
+		min-width: 312px;
+		overflow:hidden;
+		img{
+			@include img-responsive;
+			margin: 0 auto;
+		}
+	}
+		.info-box_header{
+			margin: 10px 10px 0 10px;
+		}
+		.info-box_description{
+			margin: 5px 10px 0 10px;
+			overflow: hidden;
+		}
+		.info-box_note{
+			display: block;
+			margin-top: 10px;
+		}
+		.info-box_details{
+			@include inline-block;
+			margin: 0 10px;
+		}
+		.info-box_navigation{
+			margin: 16px 10px 10px 10px;
+			@include clearfix;
+		}
+			.info-box_button{
+				text-decoration: none;
+			}
+				.info-box_nav_title{
+					@include rounded($ib-rounded);
+					@include inline-block;
+					vertical-align: top;
+					padding: 0 10px;
+					height: 20px;
+					line-height: 20px;
+					position: relative;
+					z-index: 1;
+				}
+				.info-box_bullet{
+					vertical-align: top;
+					@include inline-block;
+					@include size(22px, 20px);
+				}
+				.info-box_button_prev{
+					.info-box_bullet{
+						@include border-left-radius($ib-rounded);
+					}
+					&:hover .info-box_nav_title{
+						@include border-left-radius(0);
+					}
+				}
+				.info-box_button_next{
+					.info-box_bullet{
+						@include border-right-radius($ib-rounded);
+					}
+					&:hover .info-box_nav_title{
+						@include border-right-radius(0);
+					}
+				}
+				.info-box_button_play{
+					color: $ib-l-color;
+					.info-box_bullet{
+						@include border-right-radius($ib-rounded);
+					}
+					&:hover .info-box_nav_title{
+						@include border-right-radius(0);
+					}
+				}
+				.info-box_button_left{
+					float: left;
+				}
+				.info-box_button_right{
+					float: right;
+				}
+				.info-box_offset_right{
+					margin-right: 3px;
+				}
+				.info-box_offset_left{
+					margin-right: 3px;
+				}

@@ -1,0 +1,240 @@
+/* line 3, ../sass/main.scss */
+html {
+  background: #eee;
+}
+
+/* line 41, ../sass/main.scss */
+.info-box {
+  -webkit-box-shadow: 3px 3px 3px #aaaaaa;
+  box-shadow: 3px 3px 3px #aaaaaa;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #333333;
+  background: #fff;
+}
+
+/* line 47, ../sass/main.scss */
+.info-box_header {
+  font-size: 1.125em;
+  color: #ff6200;
+}
+
+/* line 51, ../sass/main.scss */
+.info-box_description {
+  font-size: 0.625em;
+}
+
+/* line 54, ../sass/main.scss */
+.info-box_note {
+  color: #777777;
+}
+
+/* line 57, ../sass/main.scss */
+.info-box_details {
+  font-size: 0.625em;
+  color: #ff6200;
+}
+/* line 60, ../sass/main.scss */
+.info-box_details:hover {
+  color: #603913;
+}
+
+/* line 64, ../sass/main.scss */
+.info-box_button {
+  color: #aaaaaa;
+  font-size: 0.75em;
+  border: 1px solid #cecece;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: url("../img/info_box_arrows.png") repeat-x 0 -33px transparent;
+}
+/* line 70, ../sass/main.scss */
+.info-box_button .info-box_nav_title {
+  text-shadow: 1px 1px 1px transparent;
+}
+/* line 72, ../sass/main.scss */
+.info-box_button .info-box_nav_title:hover {
+  background: url("../img/info_box_arrows.png") repeat-x 0 -58px transparent;
+  color: white;
+  text-shadow: 1px 1px 1px #333333;
+}
+
+/* line 79, ../sass/main.scss */
+.info-box_bullet {
+  background-image: url(../img/info_box_arrows.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+/* line 85, ../sass/main.scss */
+.info-box_button_prev .info-box_bullet {
+  border-right: 1px solid #cecece;
+  background-position: -4px -5px;
+  box-shadow: 1px 0 white;
+}
+
+/* line 92, ../sass/main.scss */
+.info-box_button_next .info-box_bullet {
+  border-left: 1px solid #cecece;
+  background-position: -34px -5px;
+  box-shadow: -1px 0 white;
+}
+
+/* line 99, ../sass/main.scss */
+.info-box_button_play .info-box_bullet {
+  border-left: 1px solid #cecece;
+  background-position: -64px -5px;
+  box-shadow: -1px 0 white;
+}
+
+/* line 107, ../sass/main.scss */
+.info-box {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  font: 16px normal verdana, arial, sans-serif;
+  overflow: hidden;
+}
+
+/* line 113, ../sass/main.scss */
+.info-box_thumb {
+  margin: 0;
+  min-width: 312px;
+  overflow: hidden;
+}
+/* line 117, ../sass/main.scss */
+.info-box_thumb img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* line 122, ../sass/main.scss */
+.info-box_header {
+  margin: 10px 10px 0 10px;
+}
+
+/* line 125, ../sass/main.scss */
+.info-box_description {
+  margin: 5px 10px 0 10px;
+  overflow: hidden;
+}
+
+/* line 129, ../sass/main.scss */
+.info-box_note {
+  display: block;
+  margin-top: 10px;
+}
+
+/* line 133, ../sass/main.scss */
+.info-box_details {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin: 0 10px;
+}
+
+/* line 137, ../sass/main.scss */
+.info-box_navigation {
+  margin: 16px 10px 10px 10px;
+}
+/* line 21, ../sass/mixin.scss */
+.info-box_navigation:before, .info-box_navigation:after {
+  content: " ";
+  display: table;
+}
+/* line 25, ../sass/mixin.scss */
+.info-box_navigation:after {
+  clear: both;
+}
+
+/* line 141, ../sass/main.scss */
+.info-box_button {
+  text-decoration: none;
+}
+
+/* line 144, ../sass/main.scss */
+.info-box_nav_title {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: top;
+  padding: 0 10px;
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 154, ../sass/main.scss */
+.info-box_bullet {
+  vertical-align: top;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  width: 22px;
+  height: 20px;
+}
+
+/* line 160, ../sass/main.scss */
+.info-box_button_prev .info-box_bullet {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+/* line 163, ../sass/main.scss */
+.info-box_button_prev:hover .info-box_nav_title {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 168, ../sass/main.scss */
+.info-box_button_next .info-box_bullet {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+/* line 171, ../sass/main.scss */
+.info-box_button_next:hover .info-box_nav_title {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 175, ../sass/main.scss */
+.info-box_button_play {
+  color: #ff6200;
+}
+/* line 177, ../sass/main.scss */
+.info-box_button_play .info-box_bullet {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+/* line 180, ../sass/main.scss */
+.info-box_button_play:hover .info-box_nav_title {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 184, ../sass/main.scss */
+.info-box_button_left {
+  float: left;
+}
+
+/* line 187, ../sass/main.scss */
+.info-box_button_right {
+  float: right;
+}
+
+/* line 190, ../sass/main.scss */
+.info-box_offset_right {
+  margin-right: 3px;
+}
+
+/* line 193, ../sass/main.scss */
+.info-box_offset_left {
+  margin-right: 3px;
+}
