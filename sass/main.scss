@@ -1,10 +1,7 @@
 @import "compass";
 @import "mixin";
-html{
-	background:#eee;
-}
 
-$ib-rounded: 5px;
+$ib-rounded:        5px;
  
 // FONT SIZE
 $ib-fz-header-size: 1.125em;
@@ -12,7 +9,7 @@ $ib-fz-button-size: .75em;
 $ib-fz-small:       .625em;
 
 // MAIN BOX
-$ib-mb-shadow: #aaa;
+$ib-mb-shadow:      #aaa;
 
 // COLOR
 $ib-c-header-color: #ff6200;
@@ -20,22 +17,22 @@ $ib-c-grey:         #333;
 $ib-note-color:     #777;
 
 // LINK
-$ib-l-color:       #ff6200;
-$ib-l-color-hover: #603913;
+$ib-l-color:        #ff6200;
+$ib-l-color-hover:  #603913; 
 
 // Sprite
 $ib-sprite: '../img/info_box_sprite.png';
 
 // BUTTON
-$ib-b-color: #aaa;
+$ib-b-color:       #aaa;
 $ib-b-hover-color: #fff;
 
-$ib-b-grey:      #cecece;
+$ib-b-grey:        #cecece;
 
 $ib-b-text-shadow: transparent;
 $ib-b-text-shadow-hover: #333;
 
-$ib-b-separator: #fff;
+$ib-b-separator:   #fff;
 
 // STYLE
 .info-box{
