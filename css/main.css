@@ -48,7 +48,7 @@ html {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  background: url("../img/info_box_arrows.png") repeat-x 0 -33px transparent;
+  background: url("../img/info_box_sprite.png") repeat-x 0 -33px transparent;
 }
 /* line 70, ../sass/main.scss */
 .info-box_button .info-box_nav_title {
@@ -56,14 +56,14 @@ html {
 }
 /* line 72, ../sass/main.scss */
 .info-box_button .info-box_nav_title:hover {
-  background: url("../img/info_box_arrows.png") repeat-x 0 -58px transparent;
+  background: url("../img/info_box_sprite.png") repeat-x 0 -58px transparent;
   color: white;
   text-shadow: 1px 1px 1px #333333;
 }
 
 /* line 79, ../sass/main.scss */
 .info-box_bullet {
-  background-image: url(../img/info_box_arrows.png);
+  background-image: url(../img/info_box_sprite.png);
   background-repeat: no-repeat;
   background-color: transparent;
 }
